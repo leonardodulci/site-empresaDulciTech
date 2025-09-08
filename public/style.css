@@ -298,22 +298,6 @@ h1, h2, h3 {
     AJUSTE DE RESPONSIVIDADE
 ====================================
 */
-@media (max-width: 768px) {
-    .cartao-analise, .cartao-analise.reverso {
-        flex-direction: column;
-        text-align: center;
-    }
-    .icone-analise {
-        margin-bottom: 20px;
-    }
-    .chamada-para-acao p {
-        font-size: 1.2em;
-    }
-    .chamada-para-acao .cta-button {
-        font-size: 1em;
-        padding: 15px 30px;
-    }
-}
 
 /* Seção de Planos */
 #planos {
@@ -544,6 +528,10 @@ footer > .container > .imgrodape{
 
     .card {
         margin-bottom: 20px;
+    }
+    #hero{
+        display: flex;
+        flex-direction: column;
     }
 
     .hero-content h1 {

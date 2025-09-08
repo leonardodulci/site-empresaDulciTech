@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+@media (max-width: 768px) {
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image {
+        max-width: 80%;
+    }
+    .section-title-left {
+        text-align: center;
+    }
+
+ .cartao-analise, .cartao-analise.reverso {
+        flex-direction: column;
+        text-align: center;
+    }
+    .icone-analise {
+        margin-bottom: 20px;
+    }
+    .chamada-para-acao p {
+        font-size: 1.2em;
+    }
+    .chamada-para-acao > .cta-button {
+        font-size: 1em;
+        padding: 15px;
+        width:50%;
+    }
+
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        border: 2px solid transparent;
+        border-color: var(--secondary-color);
+        margin-bottom: 20px;
+    }
+    #hero{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .whatsapp-button {
+        bottom: 15px;
+        right: 15px;
+        font-size: 2em;
+        width: 50px;
+        height: 50px;
+    }
+    .section-title, .section-title-left {
+        font-size: 2em;
+    }
+
+    #hero-form input {
+        width: 100%;
+    }
+    .cta-button {
+        width: 100%;
+    }
+
+}
