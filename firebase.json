@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "site":"dulcitech",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]}
+}
