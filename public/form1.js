@@ -33,9 +33,7 @@ Mensagem: ${message}`;
         const email = document.getElementById('hero-email').value;
         
         // Constrói a mensagem para o WhatsApp
-        const whatsappMessage = `Olá, vim pelo seu site e tenho interesse nos serviços da DulciTech. 
-Meu nome é ${name} e meu e-mail é ${email}. 
-Gostaria de agendar uma conversa.`;
+        const whatsappMessage = `Olá, vim pelo seu site e tenho interesse nos serviços da DulciTech. Meu nome é ${name} e meu e-mail é ${email}. Gostaria de agendar uma conversa.`;
         
         // Codifica a mensagem para a URL
         const encodedMessage = encodeURIComponent(whatsappMessage);
@@ -44,7 +42,7 @@ Gostaria de agendar uma conversa.`;
         const phoneNumber = '5561983529676';
 
         // Constrói a URL completa do WhatsApp
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
 
         // Abre uma nova aba com o WhatsApp
         window.open(whatsappUrl, '_blank');
