@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media (max-width: 768px) {
+@media screen and (min-width: 200px) and (max-width: 768px) {
 
     .about-content {
         flex-direction: column;
@@ -24,9 +24,8 @@
         font-size: 1.2em;
     }
     .chamada-para-acao > .cta-button {
-        font-size: 1em;
-        padding: 15px;
-        width:50%;
+        font-size:15px;
+        padding: 8px;
     }
 
     #porque-site-profissional{

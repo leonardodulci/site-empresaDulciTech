@@ -199,17 +199,6 @@ h1, h2, h3 {
     line-height: 1.6;
 }
 
-/*
-====================================
-    AJUSTE DE RESPONSIVIDADE
-====================================
-*/
-@media (max-width: 768px) {
-    .cartao-motivo, .cartao-motivo.reverso {
-        flex-direction: column;
-        text-align: justify;
-    }
-}
 
 /*
 ====================================
@@ -293,11 +282,7 @@ h1, h2, h3 {
     transform: translateY(-5px);
 }
 
-/*
-====================================
-    AJUSTE DE RESPONSIVIDADE
-====================================
-*/
+
 
 /* Seção de Planos */
 #planos {
@@ -506,55 +491,3 @@ footer > .container > .imgrodape{
     box-shadow: 5px 5px 10px 1px black;
 }
 
-/* Media Queries para Responsividade */
-@media (max-width: 992px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-image {
-        max-width: 80%;
-    }
-    .section-title-left {
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        margin-bottom: 20px;
-    }
-    #hero{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5em;
-    }
-    .hero-content p {
-        font-size: 1em;
-    }
-    .whatsapp-button {
-        bottom: 15px;
-        right: 15px;
-        font-size: 2em;
-        width: 50px;
-        height: 50px;
-    }
-    .section-title, .section-title-left {
-        font-size: 2em;
-    }
-
-    #hero-form input {
-        width: 100%;
-    }
-    .cta-button {
-        width: 100%;
-    }
-}
