@@ -10,7 +10,7 @@
         max-width: 80%;
     }
     .section-title-left {
-        text-align: center;
+        text-align: justify;
     }
 
  .cartao-analise, .cartao-analise.reverso {
@@ -29,6 +29,9 @@
         width:50%;
     }
 
+    #porque-site-profissional{
+         text-align: justify;
+    }
 
     .cards-container {
         flex-direction: column;

@@ -207,7 +207,7 @@ h1, h2, h3 {
 @media (max-width: 768px) {
     .cartao-motivo, .cartao-motivo.reverso {
         flex-direction: column;
-        text-align: center;
+        text-align: justify;
     }
 }
 
