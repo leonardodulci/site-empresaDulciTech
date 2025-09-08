@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = document.getElementById('message').value;
 
         // Constrói a mensagem a ser enviada
-        const whatsappMessage = `Olá, meu nome é ${name}.%0A%0A
-E-mail: ${email}%0A
-Telefone: ${phone}%0A%0A
+        const whatsappMessage = `Olá, meu nome é ${name}. 
+E-mail: ${email} 
+Telefone: ${phone} 
 Mensagem: ${message}`;
 
         // Codifica a mensagem para ser usada em uma URL

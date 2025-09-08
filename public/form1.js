@@ -33,8 +33,8 @@ Mensagem: ${message}`;
         const email = document.getElementById('hero-email').value;
         
         // Constrói a mensagem para o WhatsApp
-        const whatsappMessage = `Olá, vim pelo seu site e tenho interesse nos serviços da DulciTech.%0A%0A
-Meu nome é ${name} e meu e-mail é ${email}.%0A
+        const whatsappMessage = `Olá, vim pelo seu site e tenho interesse nos serviços da DulciTech. 
+Meu nome é ${name} e meu e-mail é ${email}. 
 Gostaria de agendar uma conversa.`;
         
         // Codifica a mensagem para a URL
