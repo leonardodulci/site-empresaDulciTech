@@ -1,0 +1,565 @@
+@charset "UTF-8";
+
+/* Estilos Globais */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.section-title-left {
+    text-align: left;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    color: var(--text-color);
+}
+
+
+/* Botão Flutuante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    font-size: 2.5em;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+.whatsapp-button > img{
+    width: 60px;
+    height: 60px;
+}
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+/* Seção Hero */
+#hero {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), #0056b3);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#hero > .logo01{
+    border-radius: 10px;
+    width: 45%;
+    margin-left: 35px;
+    margin-top: 10px;
+} 
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+}
+
+/* Formulário da Seção Hero */
+#hero-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+#hero-form input {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    width: 250px;
+    font-size: 1em;
+    box-shadow: var(--shadow-light);
+    transition: box-shadow 0.3s ease;
+}
+
+#hero-form input:focus {
+    box-shadow: 0 0 0 3px var(--secondary-color);
+    outline: none;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #1aaf83;
+    transform: translateY(-3px);
+}
+
+.small-cta {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+/*
+====================================
+    SEÇÃO POR QUE UM SITE PROFISSIONAL
+====================================
+*/
+#porque-site-profissional {
+    padding: 80px 0;
+    background-color: var(--card-background);
+}
+
+.cartao-motivo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+.cartao-motivo.reverso {
+    flex-direction: row-reverse;
+}
+
+.cartao-motivo .icone {
+    font-size: 4em;
+    color: var(--primary-color);
+    min-width: 100px;
+    text-align: center;
+}
+
+.texto-motivo h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.texto-motivo p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/*
+====================================
+    AJUSTE DE RESPONSIVIDADE
+====================================
+*/
+@media (max-width: 768px) {
+    .cartao-motivo, .cartao-motivo.reverso {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/*
+====================================
+    SEÇÃO ANÁLISE DE DADOS
+====================================
+*/
+#analise-dados {
+    padding: 80px 0;
+    background-color: #0057b363; /* Usar o cinza claro para fundo */
+}
+
+.cartao-analise {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 40px;
+    background-color: var(--card-background); /* Fundo branco para os cartões */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao-analise:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cartao-analise.reverso {
+    flex-direction: row-reverse;
+}
+
+.icone-analise {
+    font-size: 4.5em; /* Ícones um pouco maiores */
+    color: var(--secondary-color); /* Usar a cor de destaque */
+    min-width: 120px;
+    text-align: center;
+}
+
+.texto-analise h3 {
+    font-size: 2em; /* Títulos maiores */
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.texto-analise p {
+    font-size: 1.15em; /* Texto um pouco maior */
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.chamada-para-acao {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background-color: var(--primary-color); /* Fundo com cor primária */
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.chamada-para-acao p {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.chamada-para-acao .cta-button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chamada-para-acao .cta-button:hover {
+    background-color: #1aaf83;
+    transform: translateY(-5px);
+}
+
+/*
+====================================
+    AJUSTE DE RESPONSIVIDADE
+====================================
+*/
+@media (max-width: 768px) {
+    .cartao-analise, .cartao-analise.reverso {
+        flex-direction: column;
+        text-align: center;
+    }
+    .icone-analise {
+        margin-bottom: 20px;
+    }
+    .chamada-para-acao p {
+        font-size: 1.2em;
+    }
+    .chamada-para-acao .cta-button {
+        font-size: 1em;
+        padding: 15px 30px;
+    }
+}
+
+/* Seção de Planos */
+#planos {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+}
+
+.card {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    padding: 35px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card.featured {
+    border-color: var(--secondary-color);
+    box-shadow: 0 8px 20px rgba(32, 201, 151, 0.2);
+}
+
+.card-header h3 {
+    font-size: 2em;
+    margin: 0 0 10px;
+    color: var(--primary-color);
+}
+
+.subtitle-plan {
+    color: var(--text-color);
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: 1em;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    flex-grow: 1;
+    margin-bottom: 30px;
+}
+
+.features-list li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.05em;
+}
+
+.features-list li:before {
+    content: "✓";
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+.contract-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+}
+
+.contract-button:hover {
+    background-color: #15253b;
+    transform: translateY(-3px);
+}
+
+/* Seção Sobre Mim */
+#about-me {
+    padding: 80px 0;
+    background-color: #0057b363;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 850px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Seção de Contato */
+#contato {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 1.05em;
+    transition: border-color 0.3s ease;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+#submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#submit-button:hover {
+    background-color: #15253b;
+    transform: translateY(-3px);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image {
+        max-width: 80%;
+    }
+    .section-title-left {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .whatsapp-button {
+        bottom: 15px;
+        right: 15px;
+        font-size: 2em;
+        width: 50px;
+        height: 50px;
+    }
+    .section-title, .section-title-left {
+        font-size: 2em;
+    }
+
+    #hero-form input {
+        width: 100%;
+    }
+    .cta-button {
+        width: 100%;
+    }
+}
