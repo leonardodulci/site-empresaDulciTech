@@ -15,7 +15,7 @@ Telefone: ${phone}%0A%0A
 Mensagem: ${message}`;
 
         const encodedMessage = encodeURIComponent(whatsappMessage);
-        const phoneNumber = '5599999999999';
+        const phoneNumber = '5561983529676';
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
         window.open(whatsappUrl, '_blank');
