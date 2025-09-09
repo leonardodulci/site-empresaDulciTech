@@ -3,47 +3,110 @@
 @media screen and (min-width: 200px) and (max-width: 768px) {
 
     body{
-        width: 105vw;
+        width: 100vw;
     }
 
-    .about-content {
+    .main-nav {
+    position: fixed;
+   
+    width: 105vw;
+    display: flex;
+    scroll-behavior: smooth;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    font-size: 10px;
+}
+
+.main-nav.scrolled {
+    background-color: #fff;
+    padding: 5px 1%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 105vw;
+}
+
+.main-nav.scrolled .nav-links {
+    margin-top: 10px;
+    width: 95vw;
+
+}
+
+
+.nav-logo img {
+    height: 40px;
+    transition: height 0.3s ease;
+}
+
+.main-nav.scrolled .nav-logo img {
+display: none;
+}
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    width: 48px;
+}
+
+.nav-links a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Cor do seu botão CTA */
+}
+
+.about-content {
         flex-direction: column;
         text-align: center;
-    }
-    .about-image {
+}
+.about-image {
         max-width: 80%;
-    }
-    .section-title-left {
+}
+.section-title-left {
         text-align: justify;
-    }
+}
 
- .cartao-analise, .cartao-analise.reverso {
+.cartao-analise, .cartao-analise.reverso {
         flex-direction: column;
         text-align: center;
-    }
-    .icone-analise {
+}
+.icone-analise {
         margin-bottom: 20px;
-    }
-    .chamada-para-acao p {
+}
+.chamada-para-acao p {
         font-size: 1.2em;
-    }
-    .chamada-para-acao > .cta-button {
+}
+.chamada-para-acao > .cta-button {
         font-size:15px;
         padding: 8px;
-    }
+}
 
-    #porque-site-profissional{
+#porque-site-profissional{
          text-align: justify;
          width: 100%;
-    }
+}
 
-    #textomotivo2{
+#textomotivo2{
        position: relative;
        top: 0px;
        left: -50px;
-    }
+ }
 
-    #porque-site-profissional .container{
+#porque-site-profissional .container{
         width: 99vw;
     }
 
