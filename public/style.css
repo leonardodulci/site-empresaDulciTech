@@ -10,13 +10,17 @@
     --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+*{
+     margin: 0;
+    padding: 0;
+}
+
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
     scroll-behavior: smooth;
 }
 
@@ -89,12 +93,12 @@ h1, h2, h3 {
     color: white;
     text-align: center;
     padding: 20px;
+    
 }
 
 #hero > .logo01{
     border-radius: 10px;
     width: 45%;
-    margin-left: 35px;
     margin-top: 10px;
 } 
 .hero-content {

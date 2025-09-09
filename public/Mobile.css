@@ -2,6 +2,10 @@
 
 @media screen and (min-width: 200px) and (max-width: 768px) {
 
+    body{
+        width: 105vw;
+    }
+
     .about-content {
         flex-direction: column;
         text-align: center;
@@ -30,6 +34,17 @@
 
     #porque-site-profissional{
          text-align: justify;
+         width: 100%;
+    }
+
+    #textomotivo2{
+       position: relative;
+       top: 0px;
+       left: -50px;
+    }
+
+    #porque-site-profissional .container{
+        width: 99vw;
     }
 
     .cards-container {
@@ -45,6 +60,7 @@
     #hero{
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
     .hero-content h1 {
@@ -54,8 +70,8 @@
         font-size: 1em;
     }
     .whatsapp-button {
-        bottom: 15px;
-        right: 15px;
+        bottom: 65px;
+        right: 30px;
         font-size: 2em;
         width: 50px;
         height: 50px;
@@ -67,8 +83,16 @@
     #hero-form input {
         width: 100%;
     }
+
+    #hero > .logo01{
+    border-radius: 10px;
+} 
     .cta-button {
         width: 100%;
+    }
+
+    footer{
+        width: 105vw;
     }
 
 }

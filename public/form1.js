@@ -36,7 +36,7 @@ Mensagem: ${message}`;
         const whatsappMessage = `Olá, vim pelo seu site e tenho interesse nos serviços da DulciTech. Meu nome é ${name} e meu e-mail é ${email}. Gostaria de agendar uma conversa.`;
         
         // Codifica a mensagem para a URL
-        const encodedMessage = encodeURIComponent(whatsappMessage);
+        const encodedMessage = encodeURIComponent(encodedMessage);
         
         // Número de telefone para onde a mensagem será enviada
         const phoneNumber = '5561983529676';
