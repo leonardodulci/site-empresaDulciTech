@@ -280,7 +280,57 @@ h1, h2, h3 {
     SEÇÃO ANÁLISE DE DADOS
 ====================================
 */
+/* Container dos Cartões de Análise */
+#analise-dados .cartao-analise {
+    display: flex; /* Habilita flexbox para o cartão */
+    align-items: center; /* Centraliza itens verticalmente */
+    background-color: #fff; /* Fundo branco para os cartões */
+    border-radius: 10px;
+    padding: 30px; /* Ajuste o padding interno do cartão */
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
 
+/* Wrapper para o conteúdo e imagem dentro do cartão */
+.cartao-conteudo-wrapper {
+    display: flex;
+    align-items: center; /* Centraliza a imagem com o texto */
+    width: 100%; /* Ocupa toda a largura do cartão */
+}
+
+/* Estilo geral para as imagens dentro dos cartões de análise */
+.imagem-analise {
+    max-width: 150px; /* Tamanho da imagem em desktop */
+    height: auto;
+    flex-shrink: 0; /* Impede que a imagem encolha */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+}
+
+/* Posiciona a imagem à direita para cartões normais */
+.cartao-analise .imagem-analise.imagem-direita {
+    margin-left: auto; /* Empurra a imagem para a direita */
+    order: 2; /* Garante que ela fique depois do texto */
+    padding-left: 20px; /* Espaçamento entre o texto e a imagem */
+}
+
+/* Posiciona a imagem à esquerda para cartões reversos */
+.cartao-analise.reverso .imagem-analise.imagem-esquerda {
+    margin-right: auto; /* Empurra a imagem para a esquerda */
+    order: -1; /* Garante que ela fique antes do texto */
+    padding-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Estilo para a div que contém o texto */
+.texto-analise {
+    flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+    /* Padding já está sendo controlado nas imagens */
+}
+
+/* Garante que o texto dentro dos cartões seja justificado ou alinhado */
+.texto-analise p {
+    text-align: justify; /* Ajuste se preferir left ou center */
+    line-height: 1.6;
+}
 
 
 #analise-dados {
