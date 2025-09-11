@@ -280,6 +280,9 @@ h1, h2, h3 {
     SEÇÃO ANÁLISE DE DADOS
 ====================================
 */
+
+
+
 #analise-dados {
     padding: 80px 0;
     background-color: #0057b363; /* Usar o cinza claro para fundo */
@@ -384,7 +387,7 @@ h1, h2, h3 {
     flex-direction: column;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid black;
 }
 
 .card:hover {
