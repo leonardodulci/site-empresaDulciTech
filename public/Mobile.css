@@ -91,8 +91,8 @@ display: none;
         font-size: 1.2em;
 }
 .chamada-para-acao > .cta-button {
-        font-size:15px;
-        padding: 8px;
+        font-size:12px;
+        width: 12%;
 }
 
 #porque-site-profissional{
