@@ -178,6 +178,54 @@
 
 
     /* --- Seção "Análise de Dados" --- */
+    /* --- Seção "Análise de Dados" --- */
+#analise-dados .cartao-analise, #analise-dados .cartao-analise.reverso {
+    flex-direction: column; /* Empilha o conteúdo e a imagem verticalmente */
+    text-align: center;
+    margin-bottom: 20px; /* Espaçamento ajustado para mobile */
+    padding: 20px;
+    align-items: center; /* Centraliza itens na coluna */
+    justify-content: center;
+}
+
+.cartao-conteudo-wrapper {
+    flex-direction: column; /* Empilha o texto e a imagem em mobile */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Estilo para as imagens em mobile */
+.imagem-analise {
+    max-width: 100px; /* Tamanho menor para a imagem em mobile */
+    height: auto;
+    margin: 0 auto 20px auto; /* Centraliza e adiciona espaço abaixo da imagem */
+    order: -1; /* Garante que a imagem venha antes do texto em mobile */
+}
+
+/* Remove paddings e margens específicas de desktop para as imagens em mobile */
+.cartao-analise .imagem-analise.imagem-direita,
+.cartao-analise.reverso .imagem-analise.imagem-esquerda {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto; /* Centraliza novamente */
+    margin-right: auto;
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+    order: -1; /* Garante que a imagem venha antes do texto */
+}
+
+.texto-analise {
+    padding: 0; /* Remove o padding lateral em mobile */
+    width: 100%; /* Ocupa a largura total */
+}
+
+.texto-analise h3 {
+    font-size: 1.5em; /* Ajuste para mobile */
+}
+
+.texto-analise p {
+    font-size: 0.95em; /* Ajuste para mobile */
+    text-align: center; /* Centraliza o texto em mobile */
+}
+
     #analise-dados {
         padding: 20px 0;
     }
