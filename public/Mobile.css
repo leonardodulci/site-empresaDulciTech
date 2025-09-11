@@ -1,161 +1,279 @@
 @charset "UTF-8";
 
+/* Media query para dispositivos com largura entre 200px e 768px */
 @media screen and (min-width: 200px) and (max-width: 768px) {
 
-    body{
-        width: 100vw;
+    /* --- Reset e Configurações Gerais --- */
+    body {
+        width: 100%; /* Garante que o corpo não exceda 100% da largura do viewport */
+        overflow-x: hidden; /* Evita rolagem lateral indesejada */
+        box-sizing: border-box; /* Inclui padding e border na largura total do elemento */
     }
 
+    /* Garante que todos os elementos respeitem a largura do pai */
+    * {
+        box-sizing: border-box;
+    }
+
+    /* --- Cabeçalho e Navegação --- */
     .main-nav {
-    position: fixed;
-   
-    width: 105vw;
-    display: flex;
-    scroll-behavior: smooth;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    background-color: white;
-    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1000;
-    font-size: 10px;
-}
-
-.main-nav.scrolled {
-    background-color: #fff;
-    padding: 5px 1%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    width: 105vw;
-}
-
-.main-nav.scrolled .nav-links {
-    margin-top: 10px;
-    width: 95vw;
-
-}
-
-
-.nav-logo img {
-    height: 40px;
-    transition: height 0.3s ease;
-}
-
-.main-nav.scrolled .nav-logo img {
-display: none;
-}
-
-
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    width: 48px;
-}
-
-.nav-links a {
-    color: #0056b3;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1em;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #007bff; /* Cor do seu botão CTA */
-}
-
-.about-content {
-        flex-direction: column;
-        text-align: center;
-}
-.about-image {
-        max-width: 80%;
-}
-.section-title-left {
-        text-align: justify;
-}
-
-.cartao-analise, .cartao-analise.reverso {
-        flex-direction: column;
-        text-align: center;
-}
-.icone-analise {
-        margin-bottom: 20px;
-}
-.chamada-para-acao p {
-        font-size: 1.2em;
-}
-.chamada-para-acao > .cta-button {
-        font-size:12px;
-        width: 12%;
-}
-
-#porque-site-profissional{
-         text-align: justify;
-         width: 100%;
-}
-
-#textomotivo2{
-       position: relative;
-       top: 0px;
-       left: -50px;
- }
-
-#porque-site-profissional .container{
-        width: 99vw;
-    }
-
-    .cards-container {
-        flex-direction: column;
+        position: fixed;
+        width: 100%; /* Corrigido de 105vw para 100% */
+        display: flex;
+        /* justify-content: space-around; */ /* Pode ser ajustado ou removido se causar espaçamento demais */
+        justify-content: center; /* Centraliza itens na navbar */
         align-items: center;
+        padding: 10px 0; /* Ajuste o padding para não empurrar o conteúdo */
+        background-color: white;
+        transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+        z-index: 1000;
+        font-size: 10px;
+        left: 0; /* Garante que o fixed fique alinhado à esquerda */
+        right: 0; /* Garante que o fixed fique alinhado à direita */
     }
 
-    .card {
-        border: 2px solid transparent;
-        border-color: var(--secondary-color);
-        margin-bottom: 20px;
+    .main-nav.scrolled {
+        background-color: #fff;
+        padding: 5px 0; /* Ajuste o padding */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        width: 100%; /* Corrigido de 105vw para 100% */
     }
-    #hero{
+
+    .main-nav.scrolled .nav-links {
+        margin-top: 10px;
+        width: 100%; /* Ajustado para 100% */
+        justify-content: space-around; /* Mantém a distribuição dos links */
+    }
+
+    .nav-logo img {
+        height: 40px;
+        transition: height 0.3s ease;
+    }
+
+    .main-nav.scrolled .nav-logo img {
+        display: none; /* Mantido conforme original */
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0 10px; /* Adicionado padding horizontal para não grudar nas bordas */
+        width: 100%; /* Ocupa a largura total disponível */
+        justify-content: space-around; /* Distribui os links uniformemente */
+    }
+
+    .nav-links li {
+        /* width: 48px; */ /* Pode ser removido para deixar o item ser mais flexível */
+        flex-grow: 1; /* Permite que os itens cresçam para preencher o espaço */
+        text-align: center; /* Centraliza o texto dentro do li */
+    }
+
+    .nav-links a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9em; /* Ajuste de fonte para caber melhor */
+        transition: color 0.3s ease;
+        display: block; /* Garante que o link ocupe todo o espaço do li */
+        padding: 5px 0; /* Pequeno padding para facilitar o clique */
+    }
+
+    .nav-links a:hover {
+        color: #007bff;
+    }
+
+    /* --- Seção Hero --- */
+    #hero {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 100%; /* Garante que a seção ocupe a largura total */
+        padding: 20px; /* Adicione um padding para não colar o conteúdo nas bordas */
+    }
+
+    #hero > .logo01 {
+        border-radius: 10px;
+        max-width: 90%; /* Limita a largura da logo para não vazar */
+        margin: 65px auto 20px auto; /* Centraliza a logo */
+    }
+
+    .hero-content {
+        text-align: center; /* Centraliza o texto e formulário */
+        width: 100%; /* Garante que o conteúdo ocupe a largura total */
     }
 
     .hero-content h1 {
-        font-size: 2.5em;
+        font-size: 2.2em; /* Ajuste de fonte para telas menores */
+        line-height: 1.2;
     }
+
     .hero-content p {
         font-size: 1em;
+        padding: 0 10px; /* Pequeno padding para o parágrafo */
     }
-    .whatsapp-button {
-        bottom: 65px;
-        right: 30px;
-        font-size: 2em;
-        width: 50px;
-        height: 50px;
-    }
-    .section-title, .section-title-left {
-        font-size: 2em;
+
+    #hero-form {
+        width: 100%;
+        padding: 0 10px; /* Padding para o formulário */
     }
 
     #hero-form input {
         width: 100%;
+        margin-bottom: 10px; /* Espaçamento entre os inputs */
     }
 
-    #hero > .logo01{
-    border-radius: 10px;
-} 
-    .cta-button {
+    .chamada-para-acao > .cta-button {
+        width: 100%; /* Garante que o botão ocupe 100% da largura do pai */
+        padding: 13px 10px; /* Ajuste de padding para o botão ser clicável e não muito grande */
+        font-size: 13px; /* Ajuste o tamanho da fonte */
+    }
+
+
+    /* --- Seções de Conteúdo (Geral) --- */
+    .container {
+        width: 100%; /* Garante que o container ocupe 100% da largura do pai */
+        padding: 0 15px; /* Adicione padding horizontal para o conteúdo não grudar nas bordas */
+        margin: 0 auto; /* Centraliza o container */
+    }
+
+    .section-title, .section-title-left {
+        font-size: 2.2em; /* Ajuste de fonte */
+        text-align: center; /* Centraliza os títulos */
+        margin-bottom: 20px;
+    }
+
+    /* Ajuste para o título da seção "Sobre Mim" */
+    .section-title-left {
+        text-align: center; /* Centraliza mesmo que antes estivesse à esquerda */
+    }
+
+
+    /* --- Seção "Por que um site profissional" --- */
+    #porque-site-profissional {
+        text-align: center; /* Centraliza o texto da seção */
+        padding: 20px 0; /* Adicione um padding vertical */
+    }
+
+    #porque-site-profissional .container {
+        width: 100%; /* Garante que o container ocupe a largura total */
+    }
+
+    .cartao-motivo, .cartao-motivo.reverso {
+        flex-direction: column; /* Coloca ícone e texto um abaixo do outro */
+        text-align: center;
+        margin-bottom: 30px; /* Espaçamento entre os cartões */
+        padding: 15px;
+    }
+
+    .icone {
+        margin-bottom: 15px; /* Espaçamento entre o ícone e o texto */
+    }
+
+    /* Removido o posicionamento relativo que causava deslocamento */
+    #textomotivo2 {
+        position: static; /* Remove a posição relativa */
+        top: auto;
+        left: auto;
+    }
+
+
+    /* --- Seção "Análise de Dados" --- */
+    #analise-dados {
+        padding: 20px 0;
+    }
+
+    .cartao-analise, .cartao-analise.reverso {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 15px;
+    }
+
+    .icone-analise {
+        margin-bottom: 15px;
+    }
+
+    .chamada-para-acao {
+        padding: 20px;
+        width: 100%; /* Garante que ocupe a largura total */
+        margin: 20px auto; /* Centraliza */
+    }
+
+    .chamada-para-acao p {
+        font-size: 1.1em; /* Ajuste o tamanho da fonte */
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    /* O botão dentro de .chamada-para-acao já está coberto por .cta-button */
+
+
+    /* --- Seção "Nossos Planos" --- */
+    .cards-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Centraliza os cartões */
+        padding: 20px 0;
+    }
+
+    .card {
+        border: 2px solid var(--secondary-color);
+        margin-bottom: 20px;
+        width: 90%; /* Ajuste a largura do cartão para ser um pouco menor que 100% */
+        max-width: 350px; /* Limite a largura máxima para não ficar muito grande em tablets */
+        padding: 20px;
+    }
+
+    /* --- Seção "Sobre Mim" --- */
+    #about-me {
+        padding: 20px 0;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 80%;
+        margin: 0 auto 20px auto; /* Centraliza a imagem e adiciona espaço abaixo */
+    }
+
+    .about-text p {
+        text-align: center; /* Centraliza o texto sobre mim */
+    }
+
+    /* --- Seção "Contato" --- */
+    #contact-form {
+        padding: 20px;
+    }
+
+    #contact-form label {
+        text-align: left; /* Alinha os labels à esquerda */
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #contact-form input,
+    #contact-form textarea,
+    #contact-form button {
         width: 100%;
+        margin-bottom: 15px;
     }
 
-    footer{
-        width: 105vw;
+    /* --- Botão WhatsApp Flutuante --- */
+    .whatsapp-button {
+        bottom: 20px; /* Ajuste a posição para não ficar muito em cima */
+        right: 20px;
+        font-size: 1.8em; /* Ajuste o tamanho da fonte do ícone */
+        width: 50px;
+        height: 50px;
+        line-height: 50px; /* Centraliza o ícone verticalmente */
     }
 
+    /* --- Rodapé --- */
+    footer {
+        width: 100%; /* Corrigido de 105vw para 100% */
+        padding: 20px 15px; /* Adicionado padding para o texto não colar nas bordas */
+        text-align: center;
+    }
 }
