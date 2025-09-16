@@ -549,6 +549,88 @@ h1, h2, h3 {
     line-height: 1.8;
 }
 
+/* Section Portfolio */
+.portfolio-section {
+  padding: clamp(2rem, 6vw, 4rem) 5%;
+  background: var(--cor7); /* ou cor clara se preferir */
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-section p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  max-width: 400px;
+  height: 300px;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  transition: transform .4s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-card figcaption {
+  padding: 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.portfolio-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
+
+.portfolio-card a {
+  display: inline-block;
+  padding: .5rem 1rem;
+  background: var(--cor1);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background .3s ease;
+}
+
+.portfolio-card a:hover {
+  background: var(--cor2);
+}
+/* Estado inicial: invisível e levemente deslocado */
+.portfolio-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Estado final: visível e no lugar */
+.portfolio-card.show-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Seção de Contato */
 #contato {
     padding: 80px 0;

@@ -290,6 +290,61 @@
         text-align: center; /* Centraliza o texto sobre mim */
     }
 
+/* Ajustes para telas até 768px (tablet e celular grande) */
+@media (max-width: 768px) {
+  .portfolio-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .portfolio-section p {
+    font-size: 0.95rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* apenas 1 card por linha */
+    gap: 1.2rem;
+  }
+
+  .portfolio-card {
+    max-width: 100%; /* ocupa toda a largura */
+  }
+
+  .portfolio-card img {
+    max-height: 240px; /* controla altura da imagem */
+    object-fit: cover;
+  }
+
+  .portfolio-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-card a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+/* Ajustes extras para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+  .portfolio-section {
+    padding: 2rem 1rem; /* menos espaço lateral */
+  }
+
+  .portfolio-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .portfolio-card img {
+    max-height: 200px; /* reduz ainda mais */
+  }
+
+  .portfolio-card a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
     /* --- Seção "Contato" --- */
     #contact-form {
         padding: 20px;
