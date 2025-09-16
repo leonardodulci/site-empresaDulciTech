@@ -588,6 +588,7 @@ h1, h2, h3 {
   height: 250px;
   display: block;
   transition: transform .4s ease;
+  border-radius: 5px;
 }
 
 .portfolio-card:hover img {
@@ -608,7 +609,7 @@ h1, h2, h3 {
 .portfolio-card a {
   display: inline-block;
   padding: .5rem 1rem;
-  background: var(--cor1);
+  background: #0057b363;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
@@ -616,7 +617,7 @@ h1, h2, h3 {
 }
 
 .portfolio-card a:hover {
-  background: var(--cor2);
+  background: #0056b3;
 }
 /* Estado inicial: invisível e levemente deslocado */
 .portfolio-card {
