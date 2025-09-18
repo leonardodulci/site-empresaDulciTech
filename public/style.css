@@ -551,7 +551,7 @@ h1, h2, h3 {
 
 /* Section Portfolio */
 .portfolio-section {
-  padding: clamp(2rem, 6vw, 4rem) 5%;
+  padding: clamp(2rem, 6vw, 7rem) 5%;
   background: var(--cor7); /* ou cor clara se preferir */
   text-align: center;
 }
@@ -580,7 +580,7 @@ h1, h2, h3 {
   background: #000;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   max-width: 400px;
-  height: 300px;
+  height: 280px;
 }
 
 .portfolio-card img {
@@ -588,7 +588,7 @@ h1, h2, h3 {
   height: 250px;
   display: block;
   transition: transform .4s ease;
-  border-radius: 5px;
+  
 }
 
 .portfolio-card:hover img {
@@ -596,7 +596,6 @@ h1, h2, h3 {
 }
 
 .portfolio-card figcaption {
-  padding: 1rem;
   background: #fff;
   text-align: center;
 }
@@ -604,11 +603,12 @@ h1, h2, h3 {
 .portfolio-card h3 {
   font-size: 1.2rem;
   margin-bottom: .5rem;
+  padding: 5px;
 }
 
 .portfolio-card a {
   display: inline-block;
-  padding: .5rem 1rem;
+  
   background: #0057b363;
   color: #fff;
   text-decoration: none;
