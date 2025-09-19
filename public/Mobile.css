@@ -18,69 +18,103 @@
     /* --- Cabeçalho e Navegação --- */
     .main-nav {
         position: fixed;
-        width: 100%; /* Corrigido de 105vw para 100% */
+        top: 0;
+        left: 0;
+        width: 100%;
         display: flex;
-        /* justify-content: space-around; */ /* Pode ser ajustado ou removido se causar espaçamento demais */
-        justify-content: center; /* Centraliza itens na navbar */
+        justify-content: space-between;
         align-items: center;
-        padding: 10px 0; /* Ajuste o padding para não empurrar o conteúdo */
+        padding: 10px 20px;
         background-color: white;
         transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
         z-index: 1000;
-        font-size: 10px;
-        left: 0; /* Garante que o fixed fique alinhado à esquerda */
-        right: 0; /* Garante que o fixed fique alinhado à direita */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+    /* Esta regra faz o menu fixo com altura reduzida quando a tela é rolada */
     .main-nav.scrolled {
-        background-color: #fff;
-        padding: 5px 0; /* Ajuste o padding */
+        padding: 5px 20px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        width: 100%; /* Corrigido de 105vw para 100% */
     }
 
-    .main-nav.scrolled .nav-links {
-        margin-top: 10px;
-        width: 100%; /* Ajustado para 100% */
-        justify-content: space-around; /* Mantém a distribuição dos links */
-    }
-
-    .nav-logo img {
-        height: 40px;
-        transition: height 0.3s ease;
-    }
-
+    /* Se você quiser esconder a logo na rolagem */
     .main-nav.scrolled .nav-logo img {
-        display: none; /* Mantido conforme original */
+        display: none;
     }
 
+    /* Estilo do Botão Hambúrguer */
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        border-radius: 3px;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    /* Animação do botão hambúrguer quando ativo */
+    .hamburger-menu.active span:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active span:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    /* Esconde os links do menu por padrão no mobile */
     .nav-links {
         list-style: none;
         display: flex;
-        margin: 0;
-        padding: 0 10px; /* Adicionado padding horizontal para não grudar nas bordas */
-        width: 100%; /* Ocupa a largura total disponível */
-        justify-content: space-around; /* Distribui os links uniformemente */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #fff;
+        padding: 80px 20px 20px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    /* Mostra os links do menu quando a classe 'active' é adicionada */
+    .nav-links.active {
+        right: 0;
     }
 
     .nav-links li {
-        /* width: 48px; */ /* Pode ser removido para deixar o item ser mais flexível */
-        flex-grow: 1; /* Permite que os itens cresçam para preencher o espaço */
-        text-align: center; /* Centraliza o texto dentro do li */
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
     }
 
     .nav-links a {
         color: #0056b3;
         text-decoration: none;
         font-weight: 600;
-        font-size: 0.9em; /* Ajuste de fonte para caber melhor */
-        transition: color 0.3s ease;
-        display: block; /* Garante que o link ocupe todo o espaço do li */
-        padding: 5px 0; /* Pequeno padding para facilitar o clique */
+        font-size: 1.2em;
+        display: block;
+        padding: 10px 0;
     }
 
-    .nav-links a:hover {
-        color: #007bff;
+    /* Adicione um margin-top à sua seção #hero para evitar que o conteúdo fique atrás da barra de navegação */
+    #hero {
+        margin-top: 60px;
     }
 
     /* --- Seção Hero --- */
@@ -125,7 +159,7 @@
     .chamada-para-acao > .cta-button {
         width: 100%; /* Garante que o botão ocupe 100% da largura do pai */
         padding: 13px 10px; /* Ajuste de padding para o botão ser clicável e não muito grande */
-        font-size: 13px; /* Ajuste o tamanho da fonte */
+        font-size: 12px; /* Ajuste o tamanho da fonte */
     }
 
 
@@ -242,7 +276,8 @@
     }
 
     .chamada-para-acao {
-        padding: 20px;
+        padding: 10px;
+        padding-bottom:30px ;
         width: 100%; /* Garante que ocupe a largura total */
         margin: 20px auto; /* Centraliza */
     }
