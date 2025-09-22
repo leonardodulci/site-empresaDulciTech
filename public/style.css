@@ -170,6 +170,7 @@ h1, h2, h3 {
 } 
 .hero-content {
     max-width: 800px;
+    margin-top: 60px;
 }
 
 .hero-content h1 {
@@ -427,7 +428,7 @@ h1, h2, h3 {
     box-shadow: var(--shadow-light);
     padding: 35px;
     flex: 1;
-    min-width: 300px;
+    min-width: 235px;
     max-width: 350px;
     display: flex;
     flex-direction: column;
